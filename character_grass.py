@@ -24,9 +24,13 @@ def runRectangle():
     #for x in range(50, 750+1, 10):
     #   y=90
     #   renderAll(x,y)
-    for x in range(750, 50-1, -10):
-        y=550
+    for y in range(90, 550+1, +10):
+        x=750
         renderAll(x,y)
+
+    #for x in range(750, 50-1, -10):
+    #    y=550
+    #    renderAll(x,y)
 
 while True:
     #runCircle()
