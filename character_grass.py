@@ -4,19 +4,24 @@ open_canvas()
 
 grass = load_image('grass.png')
 character=load_image('character.png')
+
+delay(1)
 def runCircle():
-    clear_canvas_now()
-    grass.draw_now(800/2,30)
-    character.draw_now(400,90)
-    delay(1)
-    
+    cx, cy, r = 400,300,200
+    for degree in range(0,360,5):
+        x=cx+r*math.cos(math.radians(degree))
+        y=cy+r*math.sin(math.radians(degree))
+        clear_canvas_now()
+        grass.draw_now(800/2,30)
+        character.draw_now(x, y)
+        delay(0.05)
 
 def runRectangle():
     pass
 
-while(1):
-    runCircle
-    runRectangle
+while True:
+    runCircle()
+    runRectangle()
     break
 
-close_canvas
+close_canvas()
