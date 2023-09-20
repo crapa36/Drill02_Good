@@ -17,7 +17,12 @@ def runCircle():
         delay(0.05)
 
 def runRectangle():
-    pass
+    for x in range(50, 750, 5):
+       y=90
+       clear_canvas_now()
+       grass.draw_now(800/2,30)
+       character.draw_now(x, y)
+       delay(0.01)
 
 while True:
     runCircle()
