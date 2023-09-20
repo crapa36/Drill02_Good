@@ -15,13 +15,13 @@ def renderAll(x,y):
 
 def runCircle():
     cx, cy, r = 400,300,200
-    for degree in range(0,360,5):
+    for degree in range(0+270,360+270,5):
         x=cx+r*math.cos(math.radians(degree))
         y=cy+r*math.sin(math.radians(degree))
         renderAll(x,y)
 
 def runRectangle():
-    for x in range(50, 750+1, 10):
+    for x in range(400, 750+1, 10):
        y=90
        renderAll(x,y)
     for y in range(90, 550+1, +10):
@@ -34,10 +34,13 @@ def runRectangle():
     for y in range(550, 90-1, -10):
         x=50
         renderAll(x,y)
+    for x in range(50, 400+1, 10):
+        y=90
+        renderAll(x,y)
 
 while True:
-    #runCircle()
     runRectangle()
-    break
+    runCircle()
+
 
 close_canvas()
